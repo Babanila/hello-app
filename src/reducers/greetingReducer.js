@@ -1,4 +1,4 @@
-const greetReducer = (state = "Hello", action) => {
+const greetReducer = (state = "Welcome", action) => {
   switch (action.type) {
     case "GREETING":
       return (state = action.payload)

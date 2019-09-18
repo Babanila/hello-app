@@ -1,11 +1,17 @@
-// const initialState = "React"
+const initialState = "World"
 
-const nameReducer = (state = "React", action) => {
+const nameReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "NAME":
+    case "REACT":
+      return (state = action.payload)
+    case "REDUX":
+      return (state = action.payload)
+    case "JAVASCRIPT":
+      return (state = action.payload)
+    case "NODE":
       return (state = action.payload)
     default:
-      return (state = "React")
+      return state
   }
 }
 
