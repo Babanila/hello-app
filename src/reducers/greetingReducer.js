@@ -1,12 +1,10 @@
-const greetReducer = (state = "Welcome", action) => {
+const greetingReducer = (state = "Welcome", action) => {
   switch (action.type) {
-    case "GREETING":
-      return (state = action.payload)
-    case "GOODBYE":
+    case "SET_GREETING":
       return (state = action.payload)
     default:
       return state
   }
 }
 
-export default greetReducer
+export default greetingReducer

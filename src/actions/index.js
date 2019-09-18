@@ -1,40 +1,13 @@
-export const react = () => {
+export const setProgram = program => {
   return {
-    type: "REACT",
-    payload: "React"
+    type: "SET_PROGRAM",
+    payload: program
   }
 }
 
-export const redux = () => {
+export const setGreeting = greeting => {
   return {
-    type: "REDUX",
-    payload: "Redux"
-  }
-}
-
-export const javaScript = () => {
-  return {
-    type: "JAVASCRIPT",
-    payload: "JavaScript"
-  }
-}
-export const node = () => {
-  return {
-    type: "NODE",
-    payload: "NodeJS"
-  }
-}
-
-export const greeting = () => {
-  return {
-    type: "GREETING",
-    payload: "Hello"
-  }
-}
-
-export const goodbye = () => {
-  return {
-    type: "GOODBYE",
-    payload: "Bye"
+    type: "SET_GREETING",
+    payload: greeting
   }
 }

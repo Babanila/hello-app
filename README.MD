@@ -1,6 +1,6 @@
-## testing
+## Hello App
 
-This repository ....
+This repository is for `hello-app`, a react app built with redux.
 
 #### Requirements
 
@@ -12,4 +12,4 @@ This repository ....
 
 - A web browser (e.g. Google Chrome, Mozila, Firefox e.t.c).
 
-- Download the C-APP from this link or use `git clone git@github.com:Babanila/xxxxxx.git`
+- Download the C-APP from this link or use `git clone git@github.com:Babanila/hello-app.git`

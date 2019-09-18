@@ -1,7 +1,7 @@
 {
-  "name": "testing",
+  "name": "hello-app",
   "version": "1.0.0",
-  "description": "Testing App",
+  "description": "Hello App with Redux",
   "main": "index.js",
   "scripts": {
     "start": "npm run build",

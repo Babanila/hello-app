@@ -1,10 +1,10 @@
 import { combineReducers } from "redux"
-import nameReducer from "./nameReducer"
-import greetReducer from "./greetingReducer"
+import programReducer from "./programReducer"
+import greetingReducer from "./greetingReducer"
 
 const allReducer = combineReducers({
-  greetUser: greetReducer,
-  userName: nameReducer
+  greetUser: greetingReducer,
+  userName: programReducer
 })
 
 export default allReducer

@@ -1,20 +1,29 @@
 import React from "react"
-import { useDispatch } from "react-redux"
-import { react, redux, javaScript, node, greeting, goodbye } from "../actions"
+import { setProgram, setGreeting } from "../actions"
+import myStore from "../store"
 
-const ButtonGroup = () => {
-  const dispatch = useDispatch()
-
+const ButtonGroup = ({ resources }) => {
   return (
     <div>
-      <button onClick={() => dispatch(react())}>React</button>
-      <button onClick={() => dispatch(redux())}>Redux</button>
-      <button onClick={() => dispatch(javaScript())}>JavaScript</button>
-      <button onClick={() => dispatch(node())}>Node</button>
-      <button onClick={() => dispatch(greeting())}>Hello</button>
-      <button onClick={() => dispatch(goodbye())}>Bye</button>
+      {resources.map((program, i) => (
+        <button
+          data-program={program}
+          key={i}
+          onClick={dispatchButtonAction}
+          style={{ fontSize: "0.8rem", marginLeft: "1rem" }}
+        >
+          {program}
+        </button>
+      ))}
     </div>
   )
+}
+
+const dispatchButtonAction = e => {
+  const text = e.target.dataset.program
+  text === "Greeting" || text === "Goodbye"
+    ? myStore.dispatch(setGreeting(text))
+    : myStore.dispatch(setProgram(text))
 }
 
 export default ButtonGroup
